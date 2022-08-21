@@ -8,7 +8,7 @@
     text-align: center;
 }
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#04F26C,#6500FF,#04F297);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -72,3 +72,33 @@ button {
     margin: auto;
     font-size: 20px
 }
+.grow { 
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+  } 
+  .grow:hover { 
+    transform: scale(1.1); 
+  }
+  .underline {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
